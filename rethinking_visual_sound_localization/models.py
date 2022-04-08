@@ -16,7 +16,7 @@ from .modules.transformer_mm import interpret
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-MODEL_URL = "https://github.com/hohsiangwu/rethinking-visual-sound-localization/releases/download/v0.1.0-alpha/rc_grad.ckpt"
+MODEL_URL = "https://github.com/hohsiangwu/rethinking-visual-sound-localization/releases/download/v0.1.0-alpha/rc_grad.pt"
 
 
 class RCGrad:
@@ -40,14 +40,14 @@ class RCGrad:
         image_encoder.load_state_dict(
             {
                 k.replace("image_encoder.", ""): v
-                for k, v in checkpoint["state_dict"].items()
+                for k, v in checkpoint.items()
                 if k.startswith("image_encoder")
             }
         )
         audio_encoder.load_state_dict(
             {
                 k.replace("audio_encoder.", ""): v
-                for k, v in checkpoint["state_dict"].items()
+                for k, v in checkpoint.items()
                 if k.startswith("audio_encoder")
             }
         )
