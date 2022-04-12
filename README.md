@@ -1,6 +1,6 @@
 # How to Listen? Rethinking Visual Sound Localization
 
-Official implementation of the paper How to Listen? Rethinking Visual Sound Localization
+Official implementation of the paper How to Listen? Rethinking Visual Sound Localization [:page_facing_up:](https://arxiv.org/abs/2204.05156)
 
 Ho-Hsiang Wu, Magdalena Fuentes, Prem Seetharaman, Juan Pablo Bello
 
